@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>四方堂書店｜理工学系 洋書・和書の古書店（昭和24年 神田創業）</title>
+<meta name="description" content="理工学系洋書・和書専門の古書店、四方堂書店。昭和24年に神田の古本街で創業。科学一般・数学・物理・地球宇宙科学・化学・生物科学・工学・建築土木・洋書・辞書。蔵書買取のご相談も承ります。">
+<style>
+:root{
+  --board:#1b3a32;      /* 黒板の深緑 */
+  --board2:#142c26;
+  --chalk:#eef2ea;
+  --paper:#fbfaf5;
+  --grid:#dfe6e2;
+  --ink:#20302b;
+  --sub:#5f6f68;
+  --rule:#c8d2cc;
+  --mark:#a8552a;       /* 朱に寄せた赤茶 */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  font-size:16px;line-height:1.9;font-feature-settings:"palt";
+}
+.mono{font-family:"Consolas","SFMono-Regular","Menlo",monospace}
+.mincho{font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 30px}
+/* 方眼 */
+.graph{
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+
+/* ── 冠：黒板 ── */
+.board{background:var(--board);color:var(--chalk);position:relative;overflow:hidden}
+.board:before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+.bar{position:relative;z-index:2;display:flex;align-items:center;gap:16px;padding:15px 0;flex-wrap:wrap;
+  border-bottom:1px solid rgba(255,255,255,.14);font-size:12.5px;letter-spacing:.14em;color:#a9bfb6}
+.bar .nm{font-size:18px;font-weight:700;letter-spacing:.2em;color:var(--chalk)}
+.bar .mail{margin-left:auto;color:var(--chalk);letter-spacing:.04em}
+
+.hero{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;padding:70px 0 74px}
+.hero .kicker{font-size:12.5px;letter-spacing:.34em;color:#8fb3a6;margin-bottom:22px}
+.hero h1{font-size:41px;line-height:1.62;font-weight:600;letter-spacing:.02em;color:#fff}
+.hero h1 u{text-decoration:none;border-bottom:4px solid rgba(168,85,42,.85);padding-bottom:2px}
+.hero .p{margin-top:26px;font-size:16px;color:#b5c9c1;line-height:2.1}
+.hero figure{margin:0}
+.hero img{width:100%;height:290px;object-fit:cover;display:block;border:6px solid rgba(255,255,255,.08)}
+.hero figcaption{margin-top:8px;font-size:11px;color:#7f9a90;letter-spacing:.06em}
+
+/* 更新の帯 */
+.now{background:var(--chalk);border-bottom:1px solid var(--rule)}
+.now .in{display:flex;gap:14px 30px;align-items:baseline;flex-wrap:wrap;padding:16px 0}
+.now .d{font-size:13px;letter-spacing:.16em;color:var(--mark);font-weight:700}
+.now .t{font-size:16px;font-weight:700}
+.now .n{font-size:13.5px;color:var(--sub)}
+
+/* 節 */
+.sec{padding:74px 0}
+.lab{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+.lab .t{font-size:12.5px;letter-spacing:.36em;color:var(--mark);white-space:nowrap}
+.lab .l{height:1px;background:var(--rule);flex:1}
+
+/* 11の本棚＝周期表のようなタイル */
+.tana{display:grid;grid-template-columns:repeat(6,1fr);gap:11px}
+.tile{
+  border:1px solid var(--rule);background:#fff;padding:15px 12px 14px;min-height:106px;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.tile .no{font-size:11px;color:#9aa8a2;letter-spacing:.06em}
+.tile .jp{font-size:15.5px;font-weight:700;line-height:1.5;letter-spacing:.02em}
+.tile.wag{background:var(--board);border-color:var(--board);color:var(--chalk)}
+.tile.wag .no{color:#8fb3a6}
+.tananote{margin-top:22px;font-size:14.5px;color:var(--sub)}
+
+/* 買取 */
+.kai{display:grid;grid-template-columns:1fr .78fr;gap:44px;align-items:center}
+.kai .lead{font-size:19px;line-height:2;font-weight:700;letter-spacing:.03em}
+.kai .body{margin-top:16px;font-size:15.5px;color:var(--sub);line-height:2.05}
+.kai figure{margin:0}
+.kai img{width:100%;height:330px;object-fit:cover;display:block}
+.kai figcaption{margin-top:7px;font-size:11px;color:#9aa8a2;letter-spacing:.06em}
+
+/* 沿革 */
+.story{background:var(--chalk);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.hist{display:grid;grid-template-columns:auto 1fr;gap:0 26px;font-size:16px}
+.hist dt{
+  font-family:"Consolas",monospace;font-size:14px;color:var(--mark);letter-spacing:.04em;
+  padding:14px 0;border-top:1px solid var(--rule);white-space:nowrap;
+}
+.hist dd{padding:14px 0;border-top:1px solid var(--rule);line-height:1.95}
+.hist dt:first-of-type,.hist dd:first-of-type{border-top:0}
+.storyq{margin-top:30px;font-size:22px;line-height:2;letter-spacing:.04em}
+
+/* 案内 */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+table.tb{width:100%;border-collapse:collapse}
+table.tb th{text-align:left;font-size:12px;letter-spacing:.18em;color:var(--sub);font-weight:400;
+  white-space:nowrap;padding:12px 18px 12px 0;vertical-align:top;border-bottom:1px solid var(--rule);width:8em}
+table.tb td{font-size:16px;padding:12px 0;border-bottom:1px solid var(--rule);line-height:1.9}
+
+/* 締め */
+.end{background:var(--board2);color:var(--chalk);padding:66px 0 28px;text-align:center}
+.end .s{font-size:14px;letter-spacing:.16em;color:#9fbab0}
+.end .m{margin-top:14px;font-size:27px;font-weight:700;letter-spacing:.04em}
+.end .disc{margin-top:46px;padding-top:20px;border-top:1px solid rgba(255,255,255,.13);
+  font-size:11.5px;color:#83a096;line-height:2;text-align:left}
+
+@media(max-width:840px){
+  .wrap{padding:0 20px}
+  .hero{grid-template-columns:1fr;gap:26px;padding:44px 0 48px}
+  .hero h1{font-size:27px;line-height:1.66}
+  .hero img{height:200px}
+  .sec{padding:50px 0}
+  .tana{grid-template-columns:repeat(2,1fr);gap:9px}
+  .tile{min-height:88px;padding:12px 10px}
+  .tile .jp{font-size:14px}
+  .kai{grid-template-columns:1fr;gap:24px}
+  .kai img{height:210px}
+  .kai .lead{font-size:17px}
+  .hist{grid-template-columns:1fr;gap:0}
+  .hist dt{padding:12px 0 0;border-top:1px solid var(--rule)}
+  .hist dd{padding:2px 0 12px;border-top:0}
+  .storyq{font-size:18px}
+  .info{grid-template-columns:1fr;gap:26px}
+  .end .m{font-size:19px}
+  .bar .mail{margin-left:0;width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- 黒板 -->
+<div class="board">
+  <div class="wrap bar">
+    <span class="nm mincho">四方堂書店</span>
+    <span>理工学系 洋書・和書専門</span>
+    <span class="mail mono">naito@shi-ho-do.com</span>
+  </div>
+  <div class="wrap hero">
+    <div>
+      <div class="kicker mono">SINCE 1949 ／ 神田・古本街</div>
+      <h1 class="mincho">良書を安価にて<br><u>ご提供させていただきたい</u>。</h1>
+      <p class="p">昭和24年に神田の古本街で店をひらいて、44年。<br>
+      いまは店舗を持たず、このホームページが四方堂書店です。</p>
+    </div>
+    <figure>
+      <img src="assets/wall.jpg" alt="">
+      <figcaption>写真はイメージです</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="now">
+  <div class="wrap in">
+    <span class="d mono">2026.07.25</span>
+    <span class="t">各本棚を更新いたしました</span>
+    <span class="n">次回の更新は8月7日（金）の正午前を予定しております</span>
+  </div>
+</div>
+
+<!-- 本棚 -->
+<div class="graph"><div class="wrap sec">
+  <div class="lab"><span class="t">十 一 の 本 棚</span><span class="l"></span></div>
+  <div class="tana">
+    <div class="tile"><span class="no mono">01</span><span class="jp">科学一般</span></div>
+    <div class="tile"><span class="no mono">02</span><span class="jp">数学</span></div>
+    <div class="tile"><span class="no mono">03</span><span class="jp">物理</span></div>
+    <div class="tile"><span class="no mono">04</span><span class="jp">地球・<br>宇宙科学</span></div>
+    <div class="tile"><span class="no mono">05</span><span class="jp">化学</span></div>
+    <div class="tile"><span class="no mono">06</span><span class="jp">生物科学</span></div>
+    <div class="tile"><span class="no mono">07</span><span class="jp">工学</span></div>
+    <div class="tile"><span class="no mono">08</span><span class="jp">建築・土木</span></div>
+    <div class="tile"><span class="no mono">09</span><span class="jp">洋書</span></div>
+    <div class="tile"><span class="no mono">10</span><span class="jp">辞書</span></div>
+    <div class="tile wag"><span class="no mono">11</span><span class="jp">ワゴン<br>セール</span></div>
+  </div>
+  <p class="tananote">在庫は全文検索でお探しいただけます。タイトル、著者、発行所などの一部からでも探せます。<br>
+  「日本の古本屋」でも販売しています。出品していない本も、ご依頼いただければ出品いたします。</p>
+</div></div>
+
+<!-- 買取 -->
+<div class="wrap sec" style="padding-top:0">
+  <div class="lab"><span class="t">蔵 書 の 買 取</span><span class="l"></span></div>
+  <div class="kai">
+    <div>
+      <p class="lead">お手持ちの蔵書を、買い取らせていただきます。</p>
+      <p class="body">買取のご希望がございましたら、メールにてご相談ください。<br>
+      <span class="mono">naito@shi-ho-do.com</span></p>
+      <p class="body">大学・企業関係で公費・経費扱いでのご注文の際は、必要な伝票とお支払い条件をお知らせください。ご指示の伝票を添えて発送いたします。当店は適格請求書発行事業者です。</p>
+    </div>
+    <figure>
+      <img src="assets/desk_flat.jpg" alt="">
+      <figcaption>写真はイメージです</figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- 沿革 -->
+<div class="story">
+  <div class="wrap sec">
+    <div class="lab"><span class="t">四 方 堂 書 店 の こ と</span><span class="l"></span></div>
+    <dl class="hist">
+      <dt>昭和24年</dt><dd>神田の古本街に店をオープン。</dd>
+      <dt>—— 44年間</dt><dd>多くのお客様に親しまれながら、商売を続けて参りました。</dd>
+      <dt>平成 5年</dt><dd>諸事情もあり、店を閉めました。</dd>
+      <dt>その後</dt><dd>お客様からの根強い要望と、「良書を安価にてご提供させていただきたい」という思いで、ホームページを開設いたしました。</dd>
+    </dl>
+    <p class="storyq mincho">どうぞ、ごひいきに！！</p>
+  </div>
+</div>
+
+<!-- 案内 -->
+<div class="wrap sec">
+  <div class="lab"><span class="t">ご 利 用 に あ た っ て</span><span class="l"></span></div>
+  <div class="info">
+    <table class="tb">
+      <tr><th>ご注文</th><td>お探しの本は全文検索から。ご注文後24時間以内に、在庫の確認と送料を含めた金額をご連絡いたします。</td></tr>
+      <tr><th>発 送</th><td>月・火・木・土の週4日</td></tr>
+      <tr><th>お問合せ</th><td class="mono">naito@shi-ho-do.com</td></tr>
+    </table>
+    <figure style="margin:0">
+      <img src="assets/open_book.jpg" alt="" style="width:100%;height:250px;object-fit:cover;display:block">
+      <figcaption style="margin-top:7px;font-size:11px;color:#9aa8a2;letter-spacing:.06em">写真はイメージです</figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- 締め -->
+<div class="end">
+  <div class="wrap">
+    <p class="s">お問合せ・蔵書買取のご相談は</p>
+    <p class="m mono">naito@shi-ho-do.com</p>
+    <p class="disc">※このページは、レベルアップオペレーションズが四方堂書店様へのご提案としてお作りした見本です。四方堂書店様が公開されているページではありません。文章は四方堂書店様のホームページに書かれているものを使わせていただき、読みやすいように一部をこちらで書き足しています。掲載している写真はすべてイメージ写真で、四方堂書店様のものではありません。お手元の写真をお送りいただければ差し替えます。ご用意が難しい場合は、こうしたイメージ写真をこちらでご用意することもできます。</p>
+  </div>
+</div>
+
+</body>
+</html>
