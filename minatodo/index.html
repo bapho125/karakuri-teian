@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>古書 みなと堂（見本）｜神戸の古本屋・歌劇と文化の本</title>
+<meta name="description" content="神戸の古本屋、古書 みなと堂。歌劇の本、一般古書、美術関連書、映画関係。カルチャー＆サブカルチャーの古本屋です。市内出張・古書買取も承ります。">
+<style>
+:root{
+  --curtain:#5c1220;
+  --curtain2:#3d0b16;
+  --gold:#c9a227;
+  --gold2:#e6cf87;
+  --cream:#f6f1e6;
+  --ink:#241a1c;
+  --sub:#6d5d60;
+  --rule:#ded2c6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--cream);color:var(--ink);
+  font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  font-size:16px;line-height:1.9;font-feature-settings:"palt";
+}
+.mincho{font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
+.wrap{max-width:1020px;margin:0 auto;padding:0 28px}
+
+/* ── 緞帳 ── */
+.top{position:relative;color:var(--cream);background:var(--curtain);overflow:hidden}
+.top .bg{position:absolute;inset:0;background:url("assets/curtain.jpg") center/cover no-repeat;opacity:.5}
+.top .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(61,11,22,.95) 0%,rgba(61,11,22,.8) 45%,rgba(61,11,22,.35) 100%)}
+.bar{position:relative;z-index:2;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  padding:15px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:12.5px;letter-spacing:.14em;color:#d8bfc4}
+.bar .nm{font-size:19px;font-weight:700;letter-spacing:.22em;color:var(--cream)}
+.bar .since{margin-left:auto;color:var(--gold2);letter-spacing:.1em}
+
+.hero{position:relative;z-index:2;padding:82px 0 88px}
+.hero .kicker{font-size:12px;letter-spacing:.4em;color:var(--gold2);margin-bottom:24px}
+.hero h1{font-size:46px;line-height:1.55;font-weight:600;letter-spacing:.03em;color:#fff}
+.hero h1 span{color:var(--gold2)}
+.hero .p{margin-top:28px;font-size:16.5px;color:#e0cdd1;max-width:33em;line-height:2.15}
+.imgnote{position:absolute;z-index:2;right:16px;bottom:9px;font-size:10.5px;color:rgba(255,255,255,.45)}
+
+/* 金の帯 */
+.gold{background:var(--gold);color:#33270a}
+.gold .in{display:flex;gap:12px 30px;align-items:baseline;flex-wrap:wrap;padding:16px 0}
+.gold .a{font-size:18px;font-weight:700;letter-spacing:.06em}
+.gold .b{font-size:13.5px;color:#54430f}
+
+/* 節 */
+.sec{padding:76px 0}
+.lab{display:flex;align-items:center;gap:14px;margin-bottom:32px}
+.lab .t{font-size:12.5px;letter-spacing:.38em;color:var(--curtain);white-space:nowrap;font-weight:700}
+.lab .l{height:1px;background:var(--rule);flex:1}
+
+/* 本棚＝プログラムの目次 */
+.prog{border-top:2px solid var(--curtain)}
+.row{display:grid;grid-template-columns:5.2em 1fr;gap:0 26px;border-bottom:1px solid var(--rule);padding:20px 2px}
+.row .n{font-family:"Yu Mincho",serif;font-size:15px;color:var(--gold);letter-spacing:.1em;padding-top:4px}
+.row h3{font-size:19px;font-weight:700;letter-spacing:.06em;margin-bottom:4px}
+.row p{font-size:15px;color:var(--sub)}
+.prognote{margin-top:24px;font-size:14.5px;color:var(--sub)}
+
+/* 写真 */
+.pics{display:grid;grid-template-columns:1.5fr 1fr;gap:18px}
+.pics figure{margin:0}
+.pics img{width:100%;height:300px;object-fit:cover;display:block}
+.pics figcaption{margin-top:7px;font-size:11px;color:#9a8e90;letter-spacing:.06em}
+
+/* 買取 */
+.kai{background:var(--curtain);color:var(--cream);padding:64px 0}
+.kai .lab .t{color:var(--gold2)}
+.kai .lab .l{background:rgba(255,255,255,.2)}
+.kai .lead{font-size:23px;line-height:1.95;letter-spacing:.04em}
+.kai .body{margin-top:20px;font-size:16px;color:#dcc6ca;line-height:2.1;max-width:38em}
+
+/* 案内 */
+table.tb{width:100%;border-collapse:collapse}
+table.tb th{text-align:left;font-size:12px;letter-spacing:.18em;color:var(--sub);font-weight:400;
+  white-space:nowrap;padding:13px 20px 13px 0;vertical-align:top;border-bottom:1px solid var(--rule);width:8em}
+table.tb td{font-size:16px;padding:13px 0;border-bottom:1px solid var(--rule);line-height:1.9}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
+
+/* 締め */
+.end{background:var(--curtain2);color:var(--cream);padding:66px 0 28px;text-align:center}
+.end .s{font-size:14px;letter-spacing:.16em;color:#c8a9ae}
+.end .m{margin-top:14px;font-size:25px;font-weight:700;letter-spacing:.05em;color:var(--gold2)}
+.end .disc{margin-top:46px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);
+  font-size:11.5px;color:#b09499;line-height:2;text-align:left}
+.end .disc strong{color:#e6cf87}
+
+@media(max-width:840px){
+  .wrap{padding:0 20px}
+  .hero{padding:52px 0 56px}
+  .hero h1{font-size:28px;line-height:1.62}
+  .hero .p{font-size:15.5px}
+  .sec{padding:52px 0}
+  .row{grid-template-columns:1fr;gap:2px}
+  .row .n{padding-top:0}
+  .pics{grid-template-columns:1fr}
+  .pics img{height:210px}
+  .kai .lead{font-size:19px}
+  .two{grid-template-columns:1fr;gap:28px}
+  .bar .since{margin-left:0;width:100%}
+  .end .m{font-size:19px}
+}
+</style>
+</head>
+<body>
+
+<!-- 緞帳 -->
+<div class="top">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="wrap bar">
+    <span class="nm mincho">古書 みなと堂</span>
+    <span>神戸の古本屋</span>
+    <span class="since">兵庫県古書籍商業協同組合 加盟店</span>
+  </div>
+  <div class="wrap hero">
+    <div class="kicker">歌 劇 ・ 一 般 古 書 ・ 美 術 ・ 映 画</div>
+    <h1 class="mincho">文化と趣味の、<br><span>古本屋さんです。</span></h1>
+    <p class="p">歌劇の本、一般古書、古本全般、美術関連書、映画関係等々。<br>カルチャー＆サブカルチャー。</p>
+  </div>
+  <div class="imgnote">写真はイメージです</div>
+</div>
+
+<div class="gold">
+  <div class="wrap in">
+    <div class="a">市内出張・古書買取もいたしております</div>
+    <div class="b">戦前の本や和本、絵葉書、お問い合わせください</div>
+  </div>
+</div>
+
+<!-- 歌劇の棚 -->
+<div class="wrap sec">
+  <div class="lab"><span class="t">歌 劇 の 棚</span><span class="l"></span></div>
+  <div class="prog">
+    <div class="row">
+      <div class="n">壱</div>
+      <div><h3>機関誌</h3><p>劇団が発行してきた機関誌を扱っています。</p></div>
+    </div>
+    <div class="row">
+      <div class="n">弐</div>
+      <div><h3>公演パンフレット</h3><p>大劇場ほか、東京、その他の劇場公演の脚本集など。</p></div>
+    </div>
+    <div class="row">
+      <div class="n">参</div>
+      <div><h3>その他書籍</h3><p>劇団関連のムック本や書籍など。</p></div>
+    </div>
+    <div class="row">
+      <div class="n">四</div>
+      <div><h3>ビンテージコーナー</h3><p>大正時代の創成期から戦前の文献等。</p></div>
+    </div>
+    <div class="row">
+      <div class="n">五</div>
+      <div><h3>その他グッズ類</h3><p>ポスター・絵葉書・主題歌集。</p></div>
+    </div>
+  </div>
+  <p class="prognote">ご注文はFAXでも受付いたしますが、商品名と商品番号、ご連絡先を必ずご記入ください。</p>
+</div>
+
+<!-- 写真 -->
+<div class="wrap sec" style="padding-top:0">
+  <div class="pics">
+    <figure><img src="assets/programmes.jpg" alt=""><figcaption>写真はイメージです</figcaption></figure>
+    <figure><img src="assets/postcards.jpg" alt=""><figcaption>写真はイメージです</figcaption></figure>
+  </div>
+</div>
+
+<!-- 買取 -->
+<div class="kai">
+  <div class="wrap">
+    <div class="lab"><span class="t">古 書 買 取</span><span class="l"></span></div>
+    <p class="lead mincho">戦前の本や和本、絵葉書。<br>お問い合わせください。</p>
+    <p class="body">市内への出張買取も承っております。買取もいたしておりますので、お問い合わせください。</p>
+  </div>
+</div>
+
+<!-- 案内 -->
+<div class="wrap sec">
+  <div class="lab"><span class="t">お 店 の こ と</span><span class="l"></span></div>
+  <div class="two">
+    <table class="tb">
+      <tr><th>店　名</th><td>古書 みなと堂</td></tr>
+      <tr><th>所在地</th><td>兵庫県神戸市中央区みなと町 1-2-3（要予約来店）</td></tr>
+      <tr><th>お問合せ</th><td>info@example.jp</td></tr>
+      <tr><th>加　盟</th><td>兵庫県古書籍商業協同組合</td></tr>
+      <tr><th>取扱い</th><td>歌劇の本／一般古書／古本全般／美術関連書／映画関係</td></tr>
+    </table>
+    <div>
+      <p style="font-size:15.5px;line-height:2.1;color:var(--sub)">
+      即売会にも参加しています。<br>
+      直近では、兵庫県古書会館（花隈）で開かれた神戸古書即売会に、8店の古書店とともに出品しました。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 締め -->
+<div class="end">
+  <div class="wrap">
+    <p class="s">本のご相談・買取のお問い合わせは</p>
+    <p class="m mincho">info@example.jp</p>
+    <p class="disc">※このページは、レベルアップオペレーションズがお作りした見本です。<strong>店名・住所・メールアドレスはすべて架空のもので、実在する店舗ではありません。</strong>文章は、ご提案先のお店のホームページに書かれているものを使わせていただき、読みやすいように一部をこちらで書き足しています。掲載している写真はすべてイメージ写真です。</p>
+  </div>
+</div>
+
+</body>
+</html>
